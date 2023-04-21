@@ -3,6 +3,7 @@ import logo from '../../../assets/logo.png'
 import moment from 'moment';
 import Marquee from "react-fast-marquee";
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Headeer = () => {
     return (
@@ -22,7 +23,7 @@ const Headeer = () => {
             {/* navber start */}
             <Navbar>
                 <Nav className="ms-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link ><Link to='/'>Home</Link></Nav.Link>
                     <Nav.Link href="#features">About</Nav.Link>
                     <Nav.Link href="#pricing">Career</Nav.Link>
                 </Nav>
