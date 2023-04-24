@@ -10,7 +10,6 @@ const CategoryNewsCard = ({ news }) => {
         <div>
             <Card className="mb-4">
                 <Card.Header className='d-flex align-items-center'>
-
                     <Card.Img style={{ height: '40px', width: '40px' }} className='rounded-circle' variant="top" src={author?.img} />
                     <div className='ms-3 flex-grow-1 '>
                         <h5 className='mb-0'>{author?.name}</h5>

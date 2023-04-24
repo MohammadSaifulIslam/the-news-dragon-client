@@ -16,7 +16,7 @@ const Main = () => {
                         <LeftNav />
                     </Col>
                     <Col sm={6}>
-                        <h3>Dragon News Home</h3>
+                        <h3 className='mb-3'>Dragon News Home</h3>
                         <Outlet />
                     </Col>
                     <Col sm={3}>

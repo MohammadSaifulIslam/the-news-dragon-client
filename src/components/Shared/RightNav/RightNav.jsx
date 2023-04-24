@@ -7,8 +7,8 @@ const RightNav = () => {
     return (
         <div className='w-full'>
             <div className="login-with">
-                <h4>Login With</h4>
-                <Button variant="outline-primary w-100 my-2"><FaGoogle/> Login with Google</Button>
+                <h3 className='mb-3'>Login With</h3>
+                <Button variant="outline-primary w-100 mb-2"><FaGoogle/> Login with Google</Button>
                 <Button variant="outline-secondary w-100"><FaGithub/> Login with Github</Button>
             </div>
             <div className="find-us-on mt-4">
