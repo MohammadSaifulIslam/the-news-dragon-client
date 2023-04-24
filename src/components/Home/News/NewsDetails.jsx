@@ -1,9 +1,15 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import NewsDetailsCard from '../../Card/NewsDetailsCard';
+import EditorInsight from '../../EditorInsight/EditorInsight';
 
 const NewsDetails = () => {
+    const newsDetails = useLoaderData();
+
     return (
         <div>
-            News details coming soon
+            <NewsDetailsCard newsDetails={newsDetails}></NewsDetailsCard>
+            <EditorInsight></EditorInsight>
         </div>
     );
 };

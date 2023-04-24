@@ -24,11 +24,11 @@ const Headeer = () => {
             <Navbar>
                 <Nav className="ms-auto">
                     <Nav.Link ><Link to='/'>Home</Link></Nav.Link>
-                    <Nav.Link href="#features">About</Nav.Link>
-                    <Nav.Link href="#pricing">Career</Nav.Link>
+                    <Nav.Link >About</Nav.Link>
+                    <Nav.Link >Career</Nav.Link>
                 </Nav>
                 <Nav className="ms-auto">
-                    <Nav.Link href="#features">Profile</Nav.Link>
+                    <Nav.Link >Profile</Nav.Link>
                     <Button variant="dark">Login</Button>
                 </Nav>
             </Navbar>
