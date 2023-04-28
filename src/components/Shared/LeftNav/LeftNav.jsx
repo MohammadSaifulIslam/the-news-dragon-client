@@ -18,7 +18,7 @@ const LeftNav = () => {
                 key={category.id}
                 className='text-light ms-3'
                 >
-                    <NavLink  to={`category/${category.id}`} className={` text-secondary text-decoration-none`}>{category.name}</NavLink>
+                    <NavLink  to={`/category/${category.id}`} className={` text-secondary text-decoration-none`}>{category.name}</NavLink>
                 </p>)
             }
            </div>

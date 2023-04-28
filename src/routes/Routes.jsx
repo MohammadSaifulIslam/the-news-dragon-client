@@ -1,38 +1,53 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
-import Home from "../components/Home/Home";
 import Category from "../components/Home/Category/Category";
 import NewsLayout from "../layout/NewsLayout";
 import NewsDetails from "../components/Home/News/NewsDetails";
+import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
+import LoginLayout from "../layout/LoginLayout";
 
 const router = createBrowserRouter([
    {
-    path : '/',
-    element: <Main/>,
+    path: '/',
+    element: <LoginLayout></LoginLayout>,
     children: [
         {
             path: '/',
-            element: <Home/>,
-            loader: () => fetch('http://localhost:5000/news')
+            element: <Navigate to='/category/0'></Navigate>
         },
         {
-            path: 'category/:id',
-            element: <Category/>,
-            loader: ({params})=> fetch(`http://localhost:5000/categories/${params.id}`)
-        }
+            path: 'login',
+            element: <Login></Login>
+        },
+        {
+            path: 'register',
+            element: <Register></Register>
+        },
     ]
    },
-   {
-    path:'news',
-    element: <NewsLayout></NewsLayout>,
-    children:[
-        {
-            path: ":id",
-            element: <NewsDetails/>,
-            loader: ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
-        }
-    ]
-   }
+    {
+        path: 'category',
+        element: <Main />,
+        children: [
+            {
+                path: ':id',
+                element: <Category />,
+                loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.id}`)
+            }
+        ]
+    },
+    {
+        path: 'news',
+        element: <NewsLayout></NewsLayout>,
+        children: [
+            {
+                path: ":id",
+                element: <NewsDetails />,
+                loader: ({ params }) => fetch(`http://localhost:5000/news/${params.id}`)
+            }
+        ]
+    }
 ])
 
 export default router;

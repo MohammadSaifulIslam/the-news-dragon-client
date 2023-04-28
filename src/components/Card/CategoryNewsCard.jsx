@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import {  Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaEye, FaRegBookmark, FaRegStar, FaShareAlt, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';

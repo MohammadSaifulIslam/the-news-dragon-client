@@ -5,11 +5,14 @@ import Headeer from '../components/Shared/Header/Header';
 import { Col, Container, Row } from 'react-bootstrap';
 import LeftNav from '../components/Shared/LeftNav/LeftNav';
 import RightNav from '../components/Shared/RightNav/RightNav';
+import Navigation from '../components/Shared/Navigation/Navigation';
 
 const Main = () => {
     return (
         <div>
             <Headeer />
+            {/* navber start */}
+            <Navigation></Navigation>
             <Container className='mt-5'>
                 <Row>
                     <Col sm={3}>
