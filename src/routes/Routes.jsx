@@ -7,6 +7,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import LoginLayout from "../layout/LoginLayout";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
+import Terms from "../components/Shared/Terms/Terms";
 
 const router = createBrowserRouter([
    {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         {
             path: 'register',
             element: <Register></Register>
+        },
+        {
+            path: 'terms',
+            element: <Terms></Terms>
         },
     ]
    },

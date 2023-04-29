@@ -5,7 +5,8 @@ import { AuthContext } from '../../../providers/AuthProvider/AuthProvider';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
-    const { user,logOut } = useContext(AuthContext);
+    const { user,logOut } = useContext(AuthContext);  
+
     const handleLogOut = () =>{
         logOut()
         .then(result => console.log(result.user))

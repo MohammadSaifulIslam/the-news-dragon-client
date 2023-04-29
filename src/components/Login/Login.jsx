@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import Navigation from '../Shared/Navigation/Navigation';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -6,11 +6,13 @@ import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider/AuthProvider';
 
 const Login = () => {
+
     const { loginUser } = useContext(AuthContext);
     const navigate = useNavigate()
     const location = useLocation()
-    const from = location.state.from.pathname || '/category/0'
+    const from = location.state?.from?.pathname || '/category/0'
     console.log(location)
+
 
     const handleSignin = event => {
         event.preventDefault();
@@ -46,7 +48,7 @@ const Login = () => {
                         <Form.Control type="password" name='password' placeholder="Password" required />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" required />
+                        <Form.Check  type="checkbox" label="Check me out" required />
                     </Form.Group>
                     <Button className='w-100 py-2 ' variant="dark" type="submit">
                         Login
